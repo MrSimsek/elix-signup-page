@@ -114,11 +114,11 @@
                 <a href="/"><img src="/img/Elix.png" width="150" alt="Elix logo"></a>
             </div>
             <div class="block lg:hidden">
-                <button class="flex items-center px-3 py-2 border rounded border-teal-light hover:text-white hover:border-white">
+                <button class="flex items-center px-3 py-2 border-2 rounded border-blue-darker" id="toggle-menu">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
                 </button>
             </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div id="menu-links" class="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div class="text-sm font-medium lg:flex-grow">
                     <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
                         Features
@@ -144,13 +144,13 @@
         </nav>
     </header>
     <section class="flex flex-col justify-center items-start md:flex-row mt-12">
-        <div class="flex-1 text-center md:text-right mt-12">
+        <div class="flex-1 text-center md:text-right pt-24">
             <img width="80%" src="/img/hero-image.png" class="max-w-md" alt="">
         </div>
         <div class="flex-1" id="signup-form-container">
             <form id="signup-form" name="signup-form" class="bg-white px-8 pt-6 pb-8 mb-4 w-full sm:w-3/4 md:ml-24">
                 <h3 class="mb-4 font-normal text-3xl">Welcome to Elix</h3>
-                <p class="mb-4 leading-normal">Let's get you all setup so you can begin setting up your first campaign or create your first product!</p>
+                <p class="mb-4 leading-normal w-3/4">Let's get you all setup so you can begin setting up your first campaign or create your first product!</p>
                 <div id="input-fields">
                     <div class="relative border-2 rounded my-6 appearance-none label-floating">
                         <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="name" type="text" placeholder="Name">
@@ -208,14 +208,18 @@
     </section>
     <script>
         var inputs = document.querySelectorAll("input");
+
         var nameField = document.getElementById("name"),
         emailField = document.getElementById("email"),
         passwordField = document.getElementById("password"),
         passwordConfirmField = document.getElementById("confirm-password")
         privacyAgreementCheckbox = document.getElementById("privacy-agreement");
 
+        var toggleMenuButton = document.getElementById("toggle-menu");
+
         var signupForm = document.forms["signup-form"].elements;
         var signupFormSubmit = document.getElementById("signup-form__submit");
+
         signupFormSubmit.addEventListener("click", function(event) {
             event.preventDefault();
             for(var index = 0; index < signupForm.length; index++) {
@@ -294,6 +298,16 @@
                     }
                 }
             });
+        });
+
+        toggleMenuButton.addEventListener("click", function() {
+            if(document.getElementById("menu-links").classList.contains("hidden")) {
+                document.getElementById("menu-links").classList.remove("hidden");
+                document.getElementById("menu-links").classList.add("block");
+            } else {
+                document.getElementById("menu-links").classList.remove("block");
+                document.getElementById("menu-links").classList.add("hidden");
+            }
         });
     </script>
 </body>

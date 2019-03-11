@@ -107,11 +107,11 @@
     </style>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
 </head>
-<body class="h-screen">
+<body>
     <header class="border-b">
         <nav class="flex items-center justify-between flex-wrap p-3 mx-auto container">
             <div class="flex items-center flex-no-shrink text-white">
-                <img src="/img/Elix.png" width="150" alt="">
+                <a href="/"><img src="/img/Elix.png" width="150" alt="Elix logo"></a>
             </div>
             <div class="block lg:hidden">
                 <button class="flex items-center px-3 py-2 border rounded border-teal-light hover:text-white hover:border-white">
@@ -120,19 +120,19 @@
             </div>
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div class="text-sm font-medium lg:flex-grow">
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
+                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
                         Features
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
+                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
                         About
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
+                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
                         Trade
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
+                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
                         Team
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0">
+                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0">
                         Blog
                     </a>
                 </div>
@@ -143,74 +143,82 @@
             </div>
         </nav>
     </header>
-    <section class="flex flex-col justify-center items-start md:flex-row mt-16 md:mt-24">
-        <div class="flex-1 text-center md:text-right">
-            <img width="80%" src="/img/hero-image.png" alt="">
+    <section class="flex flex-col justify-center items-start md:flex-row mt-12">
+        <div class="flex-1 text-center md:text-right mt-12">
+            <img width="80%" src="/img/hero-image.png" class="max-w-md" alt="">
         </div>
-        <div class="flex-1">
-            <form id="signup-form" name="signup-form" class="bg-white px-8 pt-6 pb-8 mb-4 w-full sm:w-3/4 md:w-3/4 lg:w-1/2 md:ml-24">
+        <div class="flex-1" id="signup-form-container">
+            <form id="signup-form" name="signup-form" class="bg-white px-8 pt-6 pb-8 mb-4 w-full sm:w-3/4 md:ml-24">
                 <h3 class="mb-4 font-normal text-3xl">Welcome to Elix</h3>
                 <p class="mb-4 leading-normal">Let's get you all setup so you can begin setting up your first campaign or create your first product!</p>
-                <div class="relative border-2 rounded my-6 appearance-none label-floating">
-                    <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="name" type="text" placeholder="Name">
-                    <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="name">
-                        Name
-                    </label>
-                </div>
-                <div class="relative border-2 rounded mb-6 appearance-none label-floating">
-                    <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="email" type="email" placeholder="Email Address">
-                    <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="email">
-                        Email Address
-                    </label>
-                </div>
-                <div class="relative border-2 rounded mb-6 appearance-none label-floating">
-                    <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="password" type="password" placeholder="Password">
-                    <label class="absolute block text-grey pin-t pin-l px-3 py-2 leading-normal" for="password">
-                        Password
-                    </label>
-                </div>
-                <div class="relative border-2 rounded mb-6 appearance-none label-floating">
-                    <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="confirm-password" type="password" placeholder="Confirm Password">
-                    <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="confirm-password">
-                        Confirm Password
-                    </label>
-                </div>
-                <div class="mb-3">
-                    <label class="block checkbox-container">
-                        <input type="checkbox" id="email-subscription">
-                        <span class="checkmark"></span>
-                        <span class="text-sm">
-                            Yes, I want to recieve emails from Elix.
-                        </span>
-                    </label>
-                </div>
-                <div class="mb-6">
-                    <label class="block checkbox-container">
-                        <input type="checkbox" id="privacy-agreement">
-                        <span class="checkmark"></span>
-                        <span class="text-sm">
-                            I agree Elix's <a href="#" class="font-bold text-blue hover:text-blue-darker">Terms of Service</a> and <a href="#" class="font-bold text-blue hover:text-blue-darker">Privacy Policy</a>.
-                        </span>
-                    </label>
-                </div>
-                <div class="flex flex-col items-start">
-                    <button id="signup-form__submit" class="cta-button bg-blue hover:bg-blue-dark text-white font-bold py-4 px-16 my-4 rounded-lg focus:outline-none focus:shadow-outline shadow-lg" type="button">
-                        Sign Up
-                    </button>
-                    <p class="text-sm">
-                        Already have account? <a href="#" class="font-bold text-blue hover:text-blue-darker">Log In</a>
-                    </p>
+                <div id="input-fields">
+                    <div class="relative border-2 rounded my-6 appearance-none label-floating">
+                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="name" type="text" placeholder="Name">
+                        <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="name">
+                            Name
+                        </label>
+                    </div>
+                    <div class="relative border-2 rounded mb-6 appearance-none label-floating">
+                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="email" type="email" placeholder="Email Address">
+                        <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="email">
+                            Email Address
+                        </label>
+                    </div>
+                    <div class="relative border-2 rounded mb-6 appearance-none label-floating">
+                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="password" type="password" placeholder="Password">
+                        <label class="absolute block text-grey pin-t pin-l px-3 py-2 leading-normal" for="password">
+                            Password
+                        </label>
+                    </div>
+                    <div class="relative border-2 rounded mb-6 appearance-none label-floating">
+                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="confirm-password" type="password" placeholder="Confirm Password">
+                        <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="confirm-password">
+                            Confirm Password
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <label class="block checkbox-container">
+                            <input type="checkbox" id="email-subscription">
+                            <span class="checkmark"></span>
+                            <span class="text-sm">
+                                Yes, I want to recieve emails from Elix.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block checkbox-container">
+                            <input type="checkbox" id="privacy-agreement">
+                            <span class="checkmark"></span>
+                            <span class="text-sm">
+                                I agree Elix's <a href="#" class="font-bold text-blue hover:text-blue-darker">Terms of Service</a> and <a href="#" class="font-bold text-blue hover:text-blue-darker">Privacy Policy</a>.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="flex flex-col items-start">
+                        <button id="signup-form__submit" class="cta-button bg-blue hover:bg-blue-dark text-white font-bold py-4 px-16 my-4 rounded-lg focus:outline-none focus:shadow-outline shadow-lg" type="button">
+                            Sign Up
+                        </button>
+                        <p class="text-sm">
+                            Already have account? <a href="#" class="font-bold text-blue hover:text-blue-darker">Log In</a>
+                        </p>
+                    </div>
                 </div>
             </form>
         </div>
     </section>
     <script>
+        var inputs = document.querySelectorAll("input");
+        var nameField = document.getElementById("name"),
+        emailField = document.getElementById("email"),
+        passwordField = document.getElementById("password"),
+        passwordConfirmField = document.getElementById("confirm-password")
+        privacyAgreementCheckbox = document.getElementById("privacy-agreement");
+
         var signupForm = document.forms["signup-form"].elements;
         var signupFormSubmit = document.getElementById("signup-form__submit");
         signupFormSubmit.addEventListener("click", function(event) {
             event.preventDefault();
             for(var index = 0; index < signupForm.length; index++) {
-                console.log(signupForm[index].id);
                 if(signupForm[index].type !== "checkbox" && signupForm[index].type !== "button" && signupForm[index].value === '') {
                     signupForm[index].parentNode.classList.add("border-red");
 
@@ -241,14 +249,51 @@
 
                 if(signupForm[index].id === "privacy-agreement") {
                     if(!signupForm[index].checked) {
-                        signupForm[index].parentNode.querySelector("span").classList.add("text-red");
+                        signupForm[index].parentNode.querySelectorAll("span")[1].classList.add("text-red");
                     } else {
-                        if(signupForm[index].parentNode.querySelector("span").classList.contains("text-red")) {
-                            signupForm[index].parentNode.querySelector("span").classList.remove("text-red")
+                        if(signupForm[index].parentNode.querySelectorAll("span")[1].classList.contains("text-red")) {
+                            signupForm[index].parentNode.querySelectorAll("span")[1].classList.remove("text-red");
                         }
                     }
                 }
             }
+
+            if(nameField.value && emailField.value && passwordField.value && passwordConfirmField.value && privacyAgreementCheckbox.checked) {
+                document.getElementById("input-fields").innerHTML = '<i class="block text-center text-green text-5xl mt-3 py-5 fas fa-check-double"></i><p class="text-center">You are successfully signed up!</p>';
+            }
+        });
+
+        inputs.forEach(function(input) {
+            input.addEventListener("input", function() {
+                this.parentNode.classList.remove("border-red");
+                if(this.parentNode.querySelector("i")) {
+                    this.parentNode.querySelector("i").parentNode.removeChild(this.parentNode.querySelector("i"));
+                }
+                
+                if(this.type !== "checkbox" && this.type !== "button" ) {
+                    // add check icon
+                    var i = document.createElement('i');
+                    i.classList.add("absolute", "pin-r", "pin-b", "pin-t", "flex", "items-center", "text-xl", "p-3", "text-green", "fas", "fa-check-circle");
+                    this.parentNode.appendChild(i);
+                }
+
+                if(this.id === "privacy-agreement") {
+                    if(!this.checked) {
+                        this.parentNode.querySelectorAll("span")[1].classList.add("text-red");
+                    } else {
+                        if(this.parentNode.querySelectorAll("span")[1].classList.contains("text-red")) {
+                            this.parentNode.querySelectorAll("span")[1].classList.remove("text-red");
+                        }
+                    }
+                }
+
+                if(!this.value) {
+                    // if there is icon, remove it
+                    if(this.parentNode.querySelector("i")) {
+                        this.parentNode.querySelector("i").parentNode.removeChild(this.parentNode.querySelector("i"));
+                    }
+                }
+            });
         });
     </script>
 </body>

@@ -26,6 +26,7 @@ signupFormSubmit.addEventListener("click", function(event) {
 
             // then add red border to it
             addRedBorder(signupForm[index]);
+            addRedText(signupForm[index]);
 
             // if there is icon, remove it
             if(signupForm[index].parentNode.querySelector("i")) {
@@ -42,6 +43,7 @@ signupFormSubmit.addEventListener("click", function(event) {
             && signupForm[index].value !== '' ) {
 
             removeRedBorder(signupForm[index]);
+            removeRedText(signupForm[index]);
             
             // if there is icon, remove it
             if(signupForm[index].parentNode.querySelector("i")) {
@@ -98,6 +100,7 @@ inputs.forEach(function(input) {
         if(this.type !== "checkbox" && this.type !== "button" && this.value === '') {
             addErrorIcon(this);
             addRedBorder(this);
+            addRedText(this);
         }
 
         if(this.id === "email" && this.value !== "" && !validateEmail(this.value)) {
@@ -107,6 +110,7 @@ inputs.forEach(function(input) {
             }
             addErrorIcon(this);
             addRedBorder(this);
+            addRedText(this);
             if(!document.getElementById('email-not-valid')) {
                 addErrorMessage(this, "email-not-valid", "Email is not valid!");
             }
@@ -119,6 +123,7 @@ inputs.forEach(function(input) {
             }
             addErrorIcon(this);
             addRedBorder(this);
+            addRedText(this);
             if(!document.getElementById('password-not-match')) {
                 addErrorMessage(this, "password-not-match","Password must match!");
             }
@@ -150,6 +155,14 @@ function addRedBorder(element) {
 
 function removeRedBorder(element) {
     return element.parentNode.classList.remove("border-red");
+}
+
+function addRedText(element) {
+    return element.parentNode.querySelector("label").classList.add("text-red");
+}
+
+function removeRedText(element) {
+    return element.parentNode.querySelector("label").classList.remove("text-red");
 }
 
 function removeNode(element, nodeType) {

@@ -1,121 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Elix Signup</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/preflight.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"
+      integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Any of your own CSS would go here -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
     <header class="border-b">
-        <nav class="flex items-center justify-between flex-wrap p-3 mx-auto container">
-            <div class="flex items-center flex-no-shrink text-white">
-                <a href="/"><img src="/img/Elix.png" width="150" alt="Elix logo"></a>
-            </div>
-            <div class="block lg:hidden">
-                <button class="flex items-center px-3 py-2 border-2 rounded border-blue-darker" id="toggle-menu">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                </button>
-            </div>
-            <div id="menu-links" class="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm font-medium lg:flex-grow">
-                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
-                        Features
-                    </a>
-                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
-                        About
-                    </a>
-                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
-                        Trade
-                    </a>
-                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4">
-                        Team
-                    </a>
-                    <a href="#link" class="block mt-4 lg:inline-block hover:text-grey lg:mt-0">
-                        Blog
-                    </a>
-                </div>
-                <div class="text-sm">
-                    <a href="#" class="inline-block px-4 py-2 leading-none hover:text-teal hover:bg-white mt-4 lg:mt-0 font-medium">Log In</a>
-                    <a href="#" class="cta-button inline-block shadow-lg px-6 py-3 border rounded-lg bg-teal text-white font-semibold mt-4 lg:mt-0 focus:outline-none focus:shadow-outline">Get Started</a>
-                </div>
-            </div>
-        </nav>
+      <nav
+        class="
+          flex
+          items-center
+          justify-between
+          flex-wrap
+          p-3
+          mx-auto
+          container
+        "
+      >
+        <div class="flex items-center flex-no-shrink text-white">
+          <a href="/"
+            ><img src="/img/Elix.png" width="150" alt="Elix logo"
+          /></a>
+        </div>
+        <div class="block lg:hidden">
+          <button
+            class="
+              flex
+              items-center
+              px-3
+              py-2
+              border-2
+              rounded
+              border-blue-darker
+            "
+            id="toggle-menu"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="menu-links"
+          class="
+            w-full
+            hidden
+            lg:block
+            flex-grow
+            lg:flex
+            lg:items-center
+            lg:w-auto
+          "
+        >
+          <div class="text-sm font-medium lg:flex-grow">
+            <a
+              href="#link"
+              class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4"
+            >
+              Features
+            </a>
+            <a
+              href="#link"
+              class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4"
+            >
+              About
+            </a>
+            <a
+              href="#link"
+              class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4"
+            >
+              Trade
+            </a>
+            <a
+              href="#link"
+              class="block mt-4 lg:inline-block hover:text-grey lg:mt-0 mr-4"
+            >
+              Team
+            </a>
+            <a
+              href="#link"
+              class="block mt-4 lg:inline-block hover:text-grey lg:mt-0"
+            >
+              Blog
+            </a>
+          </div>
+          <div class="text-sm">
+            <a
+              href="#"
+              class="
+                inline-block
+                px-4
+                py-2
+                leading-none
+                hover:text-teal
+                hover:bg-white
+                mt-4
+                lg:mt-0
+                font-medium
+              "
+              >Log In</a
+            >
+            <a
+              href="#"
+              class="
+                cta-button
+                inline-block
+                shadow-lg
+                px-6
+                py-3
+                border
+                rounded-lg
+                bg-teal
+                text-white
+                font-semibold
+                mt-4
+                lg:mt-0
+                focus:outline-none
+                focus:shadow-outline
+              "
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
-    <section class="flex flex-col justify-center items-center md:items-start md:flex-row mt-12">
-        <div class="flex-1 text-center md:text-right pt-2 md:pt-24">
-            <img width="80%" src="/img/hero-image.png" class="max-w-md" alt="">
-        </div>
-        <div class="flex-1" id="signup-form-container">
-            <form id="signup-form" name="signup-form" class="bg-white px-8 pt-6 pb-8 mb-4 w-full sm:w-3/4 mx-auto md:ml-24">
-                <h3 class="mb-4 font-normal text-3xl">Welcome to Elix</h3>
-                <p class="mb-4 leading-normal w-full md:w-3/4">Let's get you all setup so you can begin setting up your first campaign or create your first product!</p>
-                <div id="input-fields">
-                    <div class="relative border-2 rounded my-6 appearance-none label-floating">
-                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="name" type="text" placeholder="Name">
-                        <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="name">
-                            Name
-                        </label>
-                    </div>
-                    <div class="relative border-2 rounded mb-6 appearance-none label-floating">
-                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="email" type="email" placeholder="Email Address">
-                        <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="email">
-                            Email Address
-                        </label>
-                    </div>
-                    <div class="relative border-2 rounded mb-6 appearance-none label-floating">
-                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="password" type="password" placeholder="Password">
-                        <label class="absolute block text-grey pin-t pin-l px-3 py-2 leading-normal" for="password">
-                            Password
-                        </label>
-                    </div>
-                    <div class="relative border-2 rounded mb-10 appearance-none label-floating">
-                        <input class="w-full py-2 px-3 text-green-darker leading-normal rounded" id="confirm-password" type="password" placeholder="Confirm Password">
-                        <label class="absolute block text-grey pin-t pin-l w-full px-3 py-2 leading-normal" for="confirm-password">
-                            Confirm Password
-                        </label>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block checkbox-container">
-                            <input type="checkbox" id="email-subscription">
-                            <span class="checkmark"></span>
-                            <span class="text-sm">
-                                Yes, I want to recieve emails from Elix.
-                            </span>
-                        </label>
-                    </div>
-                    <div class="mb-6">
-                        <label class="block checkbox-container">
-                            <input type="checkbox" id="privacy-agreement">
-                            <span class="checkmark"></span>
-                            <span class="text-sm">
-                                I agree Elix's <a href="#" class="font-bold text-blue hover:text-blue-darker">Terms of Service</a> and <a href="#" class="font-bold text-blue hover:text-blue-darker">Privacy Policy</a>.
-                            </span>
-                        </label>
-                    </div>
-                    <div class="flex flex-col items-start">
-                        <button id="signup-form__submit" class="cta-button bg-blue hover:bg-blue-dark text-white font-bold py-4 px-16 my-4 rounded-lg focus:outline-none focus:shadow-outline shadow-lg" type="button">
-                            Sign Up
-                        </button>
-                        <p class="text-sm">
-                            Already have account? <a href="#" class="font-bold text-blue hover:text-blue-darker">Log In</a>
-                        </p>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <section
+      class="
+        flex flex-col
+        justify-center
+        items-center
+        md:items-start
+        md:flex-row
+        mt-12
+      "
+    >
+      <div class="flex-1 text-center md:text-right pt-2 md:pt-24">
+        <img
+          src="/img/hero-image.png"
+          width="90%"
+          class="max-w-lg mx-auto"
+          alt=""
+        />
+      </div>
+      <div class="flex-1" id="signup-form-container">
+        <form
+          id="signup-form"
+          name="signup-form"
+          class="bg-white px-8 pt-6 pb-8 mb-4 w-full sm:w-3/4 mx-auto md:ml-24"
+        >
+          <h3 class="mb-4 font-normal text-3xl">Welcome to Elix</h3>
+          <p class="mb-4 leading-normal w-full md:w-3/4">
+            Let's get you all setup so you can begin setting up your first
+            campaign or create your first product!
+          </p>
+          <div id="input-fields">
+            <div
+              class="
+                relative
+                border-2
+                rounded
+                my-6
+                appearance-none
+                label-floating
+              "
+            >
+              <input
+                class="w-full py-2 px-3 leading-normal rounded"
+                id="name"
+                type="text"
+                placeholder="Name"
+              />
+              <label
+                class="
+                  absolute
+                  block
+                  text-grey
+                  top-0
+                  left-0
+                  w-full
+                  px-3
+                  py-2
+                  leading-normal
+                "
+                for="name"
+              >
+                Name
+              </label>
+            </div>
+            <div
+              class="
+                relative
+                border-2
+                rounded
+                mb-6
+                appearance-none
+                label-floating
+              "
+            >
+              <input
+                class="w-full py-2 px-3 leading-normal rounded"
+                id="email"
+                type="email"
+                placeholder="Email Address"
+              />
+              <label
+                class="
+                  absolute
+                  block
+                  text-grey
+                  top-0
+                  left-0
+                  w-full
+                  px-3
+                  py-2
+                  leading-normal
+                "
+                for="email"
+              >
+                Email Address
+              </label>
+            </div>
+            <div
+              class="
+                relative
+                border-2
+                rounded
+                mb-6
+                appearance-none
+                label-floating
+              "
+            >
+              <input
+                class="w-full py-2 px-3 leading-normal rounded"
+                id="password"
+                type="password"
+                placeholder="Password"
+              />
+              <label
+                class="
+                  absolute
+                  block
+                  text-grey
+                  top-0
+                  left-0
+                  px-3
+                  py-2
+                  leading-normal
+                "
+                for="password"
+              >
+                Password
+              </label>
+            </div>
+            <div
+              class="
+                relative
+                border-2
+                rounded
+                mb-10
+                appearance-none
+                label-floating
+              "
+            >
+              <input
+                class="w-full py-2 px-3 leading-normal rounded"
+                id="confirm-password"
+                type="password"
+                placeholder="Confirm Password"
+              />
+              <label
+                class="
+                  absolute
+                  block
+                  text-grey
+                  top-0
+                  left-0
+                  w-full
+                  px-3
+                  py-2
+                  leading-normal
+                "
+                for="confirm-password"
+              >
+                Confirm Password
+              </label>
+            </div>
+            <div class="mb-4">
+              <label class="block checkbox-container">
+                <input type="checkbox" id="email-subscription" />
+                <span class="checkmark"></span>
+                <span class="text-sm">
+                  Yes, I want to recieve emails from Elix.
+                </span>
+              </label>
+            </div>
+            <div class="mb-6">
+              <label class="block checkbox-container">
+                <input type="checkbox" id="privacy-agreement" />
+                <span class="checkmark"></span>
+                <span class="text-sm">
+                  I agree Elix's
+                  <a href="#" class="font-bold text-blue hover:text-blue-darker"
+                    >Terms of Service</a
+                  >
+                  and
+                  <a href="#" class="font-bold text-blue hover:text-blue-darker"
+                    >Privacy Policy</a
+                  >.
+                </span>
+              </label>
+            </div>
+            <div class="flex flex-col items-start">
+              <button
+                id="signup-form__submit"
+                class="
+                  cta-button
+                  bg-blue
+                  hover:bg-blue-dark
+                  text-white
+                  font-bold
+                  py-4
+                  px-16
+                  my-4
+                  rounded-lg
+                  focus:outline-none
+                  focus:shadow-outline
+                  shadow-lg
+                "
+                type="button"
+              >
+                Sign Up
+              </button>
+              <p class="text-sm">
+                Already have account?
+                <a href="#" class="font-bold text-blue hover:text-blue-darker"
+                  >Log In</a
+                >
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
     <script src="/js/main.js"></script>
-</body>
+  </body>
 </html>
